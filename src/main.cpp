@@ -19,6 +19,13 @@ void wEE(){
  for (int i=0; i<64;i++) EEPROM[i]=EE[i];
 }
 
+void firstrun(){
+ for (int i=0;i<64;i++){
+  EE[i]=0;
+ }
+ wEE();
+}
+
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED, OUTPUT);
@@ -35,7 +42,7 @@ void loop() {
   for (byte i=2;i<dpins;i++){
    if (){
 
-     
+
    }
   }
   digitalWrite(LED, HIGH);   // turn the LED on (HIGH is the voltage level)
